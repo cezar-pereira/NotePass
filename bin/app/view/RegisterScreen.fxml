@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0"
+	prefWidth="420.0" style="-fx-background-color: WHITE;"
+	xmlns="http://javafx.com/javafx/10.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="app.controller.RegisterScreenController">
+	<children>
+		<VBox layoutX="14.0" layoutY="110.0" prefHeight="192.0"
+			prefWidth="367.0">
+			<children>
+				<HBox alignment="CENTER" prefHeight="63.0" prefWidth="367.0">
+					<children>
+						<AnchorPane prefHeight="42.0" prefWidth="35.0">
+							<children>
+								<ImageView fitHeight="20.0" fitWidth="20.0"
+									layoutX="8.0" layoutY="20.0" pickOnBounds="true"
+									preserveRatio="true">
+									<image>
+										<Image url="@images/user20.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<JFXTextField fx:id="fieldUser" prefHeight="26.0"
+							prefWidth="316.0" promptText="Usuário">
+							<font>
+								<Font size="17.0" />
+							</font>
+						</JFXTextField>
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="63.0" prefWidth="367.0">
+					<children>
+						<AnchorPane prefHeight="42.0" prefWidth="35.0">
+							<children>
+								<ImageView fitHeight="20.0" fitWidth="20.0"
+									layoutX="8.0" layoutY="20.0" pickOnBounds="true"
+									preserveRatio="true">
+									<image>
+										<Image url="@images/password20.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<JFXTextField fx:id="fieldPassword" prefHeight="26.0"
+							prefWidth="316.0" promptText="Senha">
+							<font>
+								<Font size="17.0" />
+							</font>
+						</JFXTextField>
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" prefHeight="63.0" prefWidth="367.0">
+					<children>
+						<AnchorPane prefHeight="42.0" prefWidth="35.0">
+							<children>
+								<ImageView fitHeight="20.0" fitWidth="20.0"
+									layoutX="8.0" layoutY="20.0" pickOnBounds="true"
+									preserveRatio="true">
+									<image>
+										<Image url="@images/key20.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+						<JFXTextField fx:id="fieldWordKey" prefWidth="316.0"
+							promptText="Palavra chave">
+							<font>
+								<Font size="17.0" />
+							</font>
+						</JFXTextField>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<JFXButton fx:id="btnConfirm" layoutX="36.0" layoutY="374.0"
+			 prefHeight="39.0" prefWidth="351.0"
+			style="-fx-background-color: #c8c8c8;" text="Confirmar" onAction="#registerUser">
+			<font>
+				<Font size="18.0" />
+			</font>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</JFXButton>
+		<Label fx:id="labelSingIn" layoutX="36.0" layoutY="481.0"
+			 text="Loga-se" textFill="BLUE" onMouseClicked="#showScreenMain">
+			<font>
+				<Font size="15.0" />
+			</font>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+		</Label>
+		<Button fx:id="btnHelp" layoutX="368.0" layoutY="251.0"
+			mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0"
+			style="-fx-background-color: transparent;">
+			<graphic>
+				<ImageView fitHeight="20.0" fitWidth="20.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/help20.png" />
+					</image>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Label fx:id="labelRegisterSucess" alignment="CENTER"
+			layoutX="93.0" layoutY="302.0" prefHeight="21.0" prefWidth="235.0"
+			text=" ">
+			<font>
+				<Font size="17.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>

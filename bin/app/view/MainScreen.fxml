@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="420.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainScreenController">
+	<center>
+		<AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<children>
+				<ImageView fx:id="imgUser" fitHeight="120.0" fitWidth="120.0" layoutX="150.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/user100.png" />
+					</image>
+				</ImageView>
+				<JFXButton fx:id="btnAutentication" layoutX="37.0" layoutY="355.0" onAction="#autentication" prefHeight="39.0" prefWidth="351.0" style="-fx-background-color: #c8c8c8;" text="Confirmar">
+					<font>
+						<Font size="18.0" />
+					</font>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</JFXButton>
+				<VBox layoutX="14.0" layoutY="176.0" prefHeight="150.0" prefWidth="367.0">
+					<children>
+						<HBox alignment="CENTER" prefHeight="63.0" prefWidth="367.0">
+							<children>
+								<AnchorPane prefHeight="42.0" prefWidth="35.0">
+									<children>
+										<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="8.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@images/user20.png" />
+											</image>
+										</ImageView>
+									</children>
+								</AnchorPane>
+								<JFXTextField fx:id="userField" prefHeight="26.0" prefWidth="316.0" promptText="Usuário">
+									<font>
+										<Font size="17.0" />
+									</font>
+								</JFXTextField>
+							</children>
+						</HBox>
+						<HBox alignment="CENTER" prefHeight="63.0" prefWidth="367.0">
+							<children>
+								<AnchorPane prefHeight="42.0" prefWidth="35.0">
+									<children>
+										<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="8.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@images/password20.png" />
+											</image>
+										</ImageView>
+									</children>
+								</AnchorPane>
+								<StackPane prefHeight="63.0" prefWidth="316.0">
+									<children>
+										<JFXPasswordField fx:id="passPasswordField" prefWidth="316.0" promptText="Senha">
+											<font>
+												<Font size="17.0" />
+											</font>
+										</JFXPasswordField>
+										<JFXTextField fx:id="textPasswordField" promptText="Senha" visible="false">
+											<font>
+												<Font size="17.0" />
+											</font>
+										</JFXTextField>
+									</children>
+								</StackPane>
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+				<HBox alignment="CENTER" layoutY="452.0" prefHeight="68.0" prefWidth="420.0" spacing="180.0" style="-fx-border-width: 2 0 0 0; -fx-border-color: #7d7d7d;">
+					<children>
+						<Label fx:id="labelForgotPass" onMouseClicked="#forgotPassword" text="Esqueceu a conta?" textFill="#5b5bcc">
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+						</Label>
+						<Label fx:id="labelRegister" onMouseClicked="#showRegisterScreen" text="Registre-se" textFill="#5b5bcc">
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+						</Label>
+					</children>
+				</HBox>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="377.0" layoutY="260.0" onMouseClicked="#funcShowPassword" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/eyePassword.png" />
+					</image>
+					<cursor>
+						<Cursor fx:constant="HAND" />
+					</cursor>
+				</ImageView>
+				<Label fx:id="labelWrongPassword" alignment="CENTER" layoutX="18.0" layoutY="307.0" prefHeight="19.0" prefWidth="385.0" textFill="RED">
+					<font>
+						<Font size="15.0" />
+					</font>
+				</Label>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>
